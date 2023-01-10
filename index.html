@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <title>Orientamento</title>
+</head>
+
+<body>
+    <div class="modal fade" id="visualizzatoreIndirizzi" tabindex="-1" data-bs-backdrop="static"
+        data-bs-keyboard="false" tabindex="-1" aria-labelledby="titoloVisInd" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="titoloVisInd">--------</h1>
+                    <button type="button" onmouseover="playHover()" onmouseout="stopHover()" onclick="modalx()"
+                        class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" >
+                    <video id="youtube-tarocco" class="video-js vjs-default-skin vjs-16-9" controls
+                        poster="https://fs.itdimaggio.edu.it/orientamento/informatica/POSTER.jpg" data-setup='{"fluid": true}'>
+                        <source src="https://fs.itdimaggio.edu.it/orientamento/informatica/DELIVERY.mp4" type="video/mp4" />
+                        <source src="https://fs.itdimaggio.edu.it/orientamento/informatica/DELIVERY.webm" type="video/webm" />
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider
+                            upgrading to a web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                    </video>
+                    <div id="contentVisInd" class="mb-10p">--------</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="canvas" width="100%" height="100%"></canvas>
+    <div class="d-flex align-items-center" style="min-height: 80vh">
+        <main class="text-center container">
+            <div class="row mb-10">
+                <div class="col">
+                    <img src="./img/logoscuola.png" alt="cacone" width="400" height="100%" />
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col col-md-auto">
+                    <img class="indirizzo" onmouseover="playHover()" onmouseout="stopHover()" onclick="popupO('inf')"
+                        src="./img/btn_inf.png" alt="bottone di informatica" />
+                    <br />
+                    <span class="nome-indirizzo">Informatica</span>
+                </div>
+                <div class="col col-md-auto">
+                    <img class="indirizzo" onmouseover="playHover()" onmouseout="stopHover()" onclick="popupO('bio')"
+                        src="./img/btn_bio.png" alt="bottone di biotecnologie" />
+                    <br />
+                    <span class="nome-indirizzo">Biotecnologie <br />
+                        Sanitarie</span>
+                </div>
+                <div class="col col-md-auto">
+                    <img class="indirizzo" onmouseover="playHover()" onmouseout="stopHover()" onclick="popupO('ele')"
+                        src="./img/btn_ele.png" alt="bottone di elettrotecnica" />
+                    <br />
+                    <span class="nome-indirizzo">Elettrotecnica</span>
+                </div>
+                <div class="col col-md-auto">
+                    <img class="indirizzo" onmouseover="playHover()" onmouseout="stopHover()" onclick="popupO('sia')"
+                        src="./img/btn_sia.png" alt="bottone di sia" />
+                    <br />
+                    <span class="nome-indirizzo">Sistemi Informativi <br />
+                        Aziendali</span>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+<audio id="hoverSound" src="sound/hover.wav"></audio>
+<audio id="clickSound" src="sound/click.wav"></audio>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
+<script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+<script src="js/index.js"></script>
+
+</html>
